@@ -1,7 +1,11 @@
 import Image from "next/image";
+import pic from "../../assets/images/pic.jpg";
+import Intro from "./components/Intro";
 
 export default function Home() {
-   return <div className=" h-[100vh] w-full bg-[#292c33] text-[#fe9b33]">
-    Jai Shreeram
-   </div>;
+   return (
+      <div>
+         <Intro />
+      </div>
+   );
 }
