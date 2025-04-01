@@ -2,6 +2,12 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import pic from "../../../assets/images/pic.jpg";
+import { FaGithub } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { MdOutlineEmail } from "react-icons/md";
+import { IoMenu } from "react-icons/io5";
+
+
 export default function Intro() {
    const [showBg, setShowBg] = useState<boolean>(false);
 
@@ -13,6 +19,9 @@ export default function Intro() {
    };
    return (
       <div className=" h-[100vh] w-full bg-background overflow-hidden relative">
+         <div className="w-full h-fit absolute top-[3rem] px-[3rem] text-gray-200">
+            <IoMenu size={35} className=" cursor-pointer"/>
+         </div>
          <div className=" absolute h-[150rem] w-[60rem] top-[-10rem] right-[-20rem] bg-themeOrange rotate-[20deg] "></div>
          <div className=" h-full w-fit border- right-[20rem] flex justify-center items-center absolute">
             <div className=" w-[210px] h-[210px] rounded-full flex justify-center items-center">
@@ -51,6 +60,17 @@ export default function Intro() {
                   } transition-all duration-500  rounded-r-[7px] bg-themeOrange z-[0]`}
                ></div>
             </div>
+         </div>
+         <div className=" h-fit w-full absolute bottom-[3rem] flex justify-start items-center px-[20rem] gap-5 text-gray-300">
+            <a href="https://github.com/ShreeramNew">
+               <FaGithub size={30} />
+            </a>
+            <a href="https://www.linkedin.com/in/shreeram-630102262/">
+               <FaLinkedin size={30} />
+            </a>
+            <a href="mailto:shreerambca1@gmail.com">
+               <MdOutlineEmail size={35} />
+            </a>
          </div>
       </div>
    );
