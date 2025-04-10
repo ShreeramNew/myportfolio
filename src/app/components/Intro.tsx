@@ -7,7 +7,6 @@ import { FaLinkedin } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 import { IoMenu } from "react-icons/io5";
 
-
 export default function Intro() {
    const [showBg, setShowBg] = useState<boolean>(false);
 
@@ -19,11 +18,21 @@ export default function Intro() {
    };
    return (
       <div className=" h-[100vh] w-full bg-background overflow-hidden relative">
-         <div className="w-full h-fit absolute top-[3rem] px-[3rem] text-gray-200">
-            <IoMenu size={35} className=" cursor-pointer"/>
+         <div className=" w-full h-full absolute inset-0 z-[1] ">
+            <video
+               src="https://videos.pexels.com/video-files/11244983/11244983-hd_1920_1080_24fps.mp4"
+               className=" w-full h-full object-cover"
+               autoPlay
+               loop
+               playsInline
+               muted
+            />
          </div>
-         <div className=" absolute h-[150rem] w-[60rem] top-[-10rem] right-[-20rem] bg-themeOrange rotate-[20deg] "></div>
-         <div className=" h-full w-fit border- right-[20rem] flex justify-center items-center absolute">
+         <div className="w-full h-fit absolute top-[3rem] px-[3rem] text-gray-200 z-[2]">
+            <IoMenu size={35} className=" cursor-pointer" />
+         </div>
+         <div className=" absolute h-[150rem] w-[60rem] top-[-10rem] right-[-20rem] bg-themeOrange rotate-[20deg] z-[2] "></div>
+         <div className=" h-full w-fit border- right-[20rem] flex justify-center items-center absolute z-[2]">
             <div className=" w-[210px] h-[210px] rounded-full flex justify-center items-center">
                <div className="w-[160px] h-[160px] overflow-hidden rounded-full border-">
                   <Image
@@ -37,7 +46,7 @@ export default function Intro() {
                </div>
             </div>
          </div>
-         <div className=" h-full w-fit px-[5rem] flex flex-col justify-center items-start">
+         <div className=" h-full w-fit px-[5rem] flex flex-col justify-center items-start z-[2] relative">
             <div className=" border-">
                {/* <div className=" text-[2rem] text-gray-200">Hello, world!</div> */}
                <div className=" text-[2.1rem] text-gray-200">
@@ -61,7 +70,7 @@ export default function Intro() {
                ></div>
             </div>
          </div>
-         <div className=" h-fit w-full absolute bottom-[3rem] flex justify-start items-center px-[20rem] gap-5 text-gray-300">
+         <div className=" z-[2] h-fit w-full absolute bottom-[3rem] flex justify-start items-center px-[20rem] gap-5 text-gray-300">
             <a href="https://github.com/ShreeramNew">
                <FaGithub size={30} />
             </a>
