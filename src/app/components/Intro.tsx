@@ -18,7 +18,7 @@ export default function Intro() {
    };
    return (
       <div className=" h-[100vh] w-full bg-background overflow-hidden relative">
-         <div className=" w-full h-full absolute inset-0 z-[1] ">
+         <div className=" w-full h-full absolute inset-0 z-[1]">
             <video
                src="https://videos.pexels.com/video-files/11244983/11244983-hd_1920_1080_24fps.mp4"
                className=" w-full h-full object-cover"
@@ -28,17 +28,20 @@ export default function Intro() {
                muted
             />
          </div>
-         <div className="w-full h-fit absolute top-[3rem] px-[3rem] text-gray-200 z-[2]">
+         <div className=" w-full h-full absolute inset-0 z-[2] opacity-[0.4] md:opacity-[0.3] bg-black  backdrop-blur-sm"></div>
+         <div className="w-full h-fit absolute top-[1rem] md:top-[3rem] px-[1rem] md:px-[3rem] text-gray-200 z-[5]">
             <IoMenu size={35} className=" cursor-pointer" />
          </div>
-         <div className=" absolute h-[150rem] w-[60rem] top-[-10rem] right-[-20rem] bg-themeOrange rotate-[20deg] z-[2] "></div>
-         <div className=" h-full w-fit border- right-[20rem] flex justify-center items-center absolute z-[2]">
+         {/* <div className=" hidden md:block absolute h-[150rem] w-[60rem] top-[-10rem] right-[-20rem] bg-themeOrange rotate-[20deg] z-[4] "></div> */}
+
+         {/*Profile Image  */}
+         <div className=" h-full w-fit border- right-0 md:right-[20rem] flex justify-center items-start scale-[0.8] md:scale-[1] md:items-center absolute z-[5]">
             <div className=" w-[210px] h-[210px] rounded-full flex justify-center items-center">
                <div className="w-[160px] h-[160px] overflow-hidden rounded-full border-">
                   <Image
                      src={pic}
                      alt="my Picture"
-                     className=" w-[180px] h-[200px] object-cover scale-[1.4] relative top-[1rem]"
+                     className=" w-[180px] h-[200px] object-cover scale-[1.3] relative top-[1rem]"
                   />
                </div>
                <div className=" w-[210px] h-[210px] border-b-2 border-t-2 animate-[spin_2s_linear_infinite]  rounded-full flex justify-center items-center absolute ">
@@ -46,11 +49,13 @@ export default function Intro() {
                </div>
             </div>
          </div>
-         <div className=" h-full w-fit px-[5rem] flex flex-col justify-center items-start z-[2] relative">
+
+         {/* Left side intro lines  */}
+         <div className=" h-full w-fit px-[1rem] md:px-[5rem] flex flex-col justify-center items-start z-[4] relative backdrop-blur-sm md:backdrop-blur-0">
             <div className=" border-">
                {/* <div className=" text-[2rem] text-gray-200">Hello, world!</div> */}
                <div className=" text-[2.1rem] text-gray-200">
-                  I' AM <span className=" text-[3.2rem] text-themeOrange ml-2">SHREERAM</span>
+                  I' AM <span className=" text-[3.2rem] text-themeOrange md:ml-2">SHREERAM</span>
                </div>
                <div className="text-[2.3rem] text-gray-300">
                   A creator of <span className="text-gray-100">Digital magic!</span>{" "}
@@ -70,7 +75,9 @@ export default function Intro() {
                ></div>
             </div>
          </div>
-         <div className=" z-[2] h-fit w-full absolute bottom-[3rem] flex justify-start items-center px-[20rem] gap-5 text-gray-300">
+
+         {/* Github and other links  */}
+         <div className=" z-[4] h-fit w-full border- absolute bottom-[3rem] flex justify-start items-center px-[2rem] md:px-[20rem] gap-5 text-gray-300">
             <a href="https://github.com/ShreeramNew">
                <FaGithub size={30} />
             </a>
