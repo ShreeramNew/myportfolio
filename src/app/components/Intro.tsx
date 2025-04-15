@@ -35,7 +35,7 @@ export default function Intro() {
          {/* <div className=" hidden md:block absolute h-[150rem] w-[60rem] top-[-10rem] right-[-20rem] bg-themeOrange rotate-[20deg] z-[4] "></div> */}
 
          {/*Profile Image  */}
-         <div className=" h-full w-fit border- right-0 md:right-[20rem] flex justify-center items-start scale-[0.8] md:scale-[1] md:items-center absolute z-[5]">
+         <div className=" h-full w-fit border- right-0 md:right-[13rem] flex justify-center items-start scale-[0.8] md:scale-[1] md:items-center absolute z-[5]">
             <div className=" w-[210px] h-[210px] rounded-full flex justify-center items-center">
                <div className="w-[160px] h-[160px] overflow-hidden rounded-full border-">
                   <Image
@@ -77,7 +77,7 @@ export default function Intro() {
          </div>
 
          {/* Github and other links  */}
-         <div className=" z-[4] h-fit w-full border- absolute bottom-[3rem] flex justify-start items-center px-[2rem] md:px-[20rem] gap-5 text-gray-300">
+         <div className=" z-[4] h-fit w-full border- absolute bottom-[5rem] flex justify-start items-center px-[2rem] md:px-[20rem] gap-5 text-gray-300">
             <a href="https://github.com/ShreeramNew">
                <FaGithub size={30} />
             </a>
@@ -87,6 +87,11 @@ export default function Intro() {
             <a href="mailto:shreerambca1@gmail.com">
                <MdOutlineEmail size={35} />
             </a>
+         </div>
+
+         {/* Github and other links  */}
+         <div className=" z-[4] h-[5rem] w-full border- absolute bottom-[0rem] flex justify-start items-center px-[2rem] md:px-[20rem] gap-5 text-gray-300 border-">
+            <div className=" w-full h-full absolute inset-0 bg-gradient-to-t from-background to-transparent border-"></div>
          </div>
       </div>
    );
