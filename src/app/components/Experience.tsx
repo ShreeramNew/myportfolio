@@ -8,13 +8,15 @@ export default function Experience() {
       {
          dot: <div className=" w-[15px] h-[15px] rounded-full bg-gray-200 flex-shrink-0" />,
          children: (
-            <div className=" pr-[1rem]">
+            <div className=" md:pr-[1rem]">
                <div className=" flex justify-between items-center">
                   <div className=" text-themeOrange text-[1.1rem]">
                      Frontend Developer Intern{" "}
-                     <span className=" text-[0.9rem] text-gray-300">@Tikanga pvt ltd, Mangalore</span>
+                     <span className=" text-[0.9rem] text-gray-300">
+                        @Tikanga pvt ltd, Mangalore
+                     </span>
                   </div>
-                  <div className=" text-gray-300">Aug 2024 - Nov 2024</div>
+                  <div className=" text-gray-300 mt-1 md:mt-0 text-[0.7rem] md:text-[1rem]">Aug 2024 - Nov 2024</div>
                </div>
                <div className=" flex flex-col gap-[10px] mt-3">
                   <CustomPoint>
@@ -64,13 +66,15 @@ export default function Experience() {
             </div>
          ),
          children: (
-            <div className=" pr-[1rem]">
+            <div className=" md:pr-[1rem]">
                <div className=" flex justify-between items-center">
                   <div className=" text-themeOrange text-[1.1rem]">
                      SDE{" "}
-                     <span className=" text-[0.9rem] text-gray-300">@Tikanga pvt ltd, Mangalore</span>
+                     <span className=" text-[0.9rem] text-gray-300">
+                        @Tikanga pvt ltd, Mangalore
+                     </span>
                   </div>
-                  <div className=" text-gray-300">Dec 2024 - Present</div>
+                  <div className=" text-gray-300 mt-1 md:mt-0 text-[0.7rem] md:text-[1rem]">Dec 2024 - Present</div>
                </div>
                <div className=" flex flex-col gap-[10px] mt-3">
                   <CustomPoint>
@@ -103,12 +107,12 @@ export default function Experience() {
       },
    ];
    return (
-      <div className=" lg:max-w-[78rem] mx-auto w-full min-h-[30rem] py-[10rem] pb-[3rem] border- flex justify-between items-start">
-         <div className=" border- w-full lg:w-[90%] ">
+      <div className=" lg:max-w-[78rem] mx-auto w-full min-h-[30rem] py-[10rem] pb-[3rem] border- flex flex-col gap-[3rem] md:gap-0 md:flex-row justify-cente items-centerr md:justify-between md:items-start">
+         <div className=" border- w-full text-center md:text-left lg:w-[90%] ">
             <div className=" text-[1.4rem] text-gray-300 font-semibold">WORK EXPERIENCE</div>
             <div className=" text-[2.3rem] text-themeOrange font-[500]">The Road So Far</div>
          </div>
-         <div className=" w-full border- ">
+         <div className=" w-full border- px-[1rem] md:px-0 ">
             <ConfigProvider
                theme={{
                   components: {

@@ -29,7 +29,7 @@ export default function Intro() {
             />
          </div>
          <div className=" w-full h-full absolute inset-0 z-[2] opacity-[0.4] md:opacity-[0.3] bg-black  backdrop-blur-sm"></div>
-         <div className="w-full h-fit absolute top-[1rem] md:top-[3rem] px-[1rem] md:px-[3rem] text-gray-200 z-[5]">
+         <div className="w-full h-fit absolute top-[1rem] md:top-[3rem] px-[1rem] md:px-[3rem] text-gray-200 z-[15]">
             <IoMenu size={35} className=" cursor-pointer" />
          </div>
          {/* <div className=" hidden md:block absolute h-[150rem] w-[60rem] top-[-10rem] right-[-20rem] bg-themeOrange rotate-[20deg] z-[4] "></div> */}
