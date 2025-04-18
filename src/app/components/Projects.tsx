@@ -1,10 +1,13 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import jobNow from "../../../assets/images/jobNow.png";
 import Image from "next/image";
 import { GoDotFill } from "react-icons/go";
+import { FaArrowRight } from "react-icons/fa";
+import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 
 export default function Projects() {
+   const [showBg, setShowBg] = useState<boolean>(false);
    return (
       <div className=" lg:max-w-[78rem] mx-auto w-full min-h-[30rem] py-[10rem] pb-[3rem] border-">
          <div className=" border- w-full text-center md:text-left lg:w-[90%] flex justify-between items-center ">
@@ -12,15 +15,54 @@ export default function Projects() {
                <div className=" text-[1.4rem] text-gray-300 font-semibold">PROJECTS</div>
                <div className=" text-[2.3rem] text-themeOrange font-[500]">Built to Learn</div>
             </div>
+            {/* Arrows  */}
+            <div className=" flex justify-center items-center gap-3 ">
+               <div className=" text-white w-[50px] h-[50px] rounded-full shadow-sm cursor-pointer flex justify-center z-[10] items-center relative">
+                  <div className="w-[50px] h-[50px] rounded-full shadow-sm cursor-pointer shadow-themeOrange absolute inset-0 animate-spin duration-500 z-[11]"></div>
+                  <FaArrowLeftLong size={25} />
+               </div>
+               <div className=" text-white w-[50px] h-[50px] rounded-full shadow-sm cursor-pointer flex justify-center z-[10] items-center relative">
+                  <div className="w-[50px] h-[50px] rounded-full shadow-sm cursor-pointer shadow-themeOrange absolute inset-0 animate-spin duration-500 z-[11]"></div>
+                  <FaArrowRightLong size={25} />
+               </div>
+            </div>
          </div>
          <div className=" w-full border- px-[1rem] md:px-0 grid grid-cols-6 border- gap-[2rem]">
-            <div className=" w-full flex col-span-2 justify-start items-center border-">
-               <div className=" h-[25rem] w-[30rem]">
+            <div className=" w-full flex flex-col col-span-2 justify-start items-start border-">
+               <div className=" h-[20rem] w-[25rem] border-">
                   <Image alt="jobNow" src={jobNow} className=" w-full h-full object-contain" />
+               </div>
+
+               {/* Project Links  */}
+               <div className=" flex justify-center items-center gap-2">
+                  <div
+                     className=" w-[10rem] h-[2.6rem] border-2 overflow-hidden border-themeOrange rounded-[6px] flex justify-center items-center text-gray-100 mt-[4rem] text-[1.3rem] cursor-pointer relative"
+                     onMouseOver={() => setShowBg(true)}
+                     onMouseLeave={() => setShowBg(false)}
+                  >
+                     <div className="z-[1]">View Project</div>
+                     <div
+                        className={`w-[11rem] h-full absolute ${
+                           showBg ? "left-0" : "left-[-11rem]"
+                        } transition-all duration-500  rounded-r-[7px] bg-themeOrange z-[0]`}
+                     ></div>
+                  </div>
+                  <div
+                     className=" w-[10rem] h-[2.6rem] border-2 overflow-hidden border-themeOrange rounded-[6px] flex justify-center items-center text-gray-100 mt-[4rem] text-[1.3rem] cursor-pointer relative"
+                     onMouseOver={() => setShowBg(true)}
+                     onMouseLeave={() => setShowBg(false)}
+                  >
+                     <div className="z-[1]">Source Code</div>
+                     <div
+                        className={`w-[11rem] h-full absolute ${
+                           showBg ? "left-[-11rem]" : "left-[0rem]"
+                        } transition-all duration-500  rounded-r-[7px] bg-themeOrange z-[0]`}
+                     ></div>
+                  </div>
                </div>
             </div>
             <div className=" w-full col-span-4">
-               <div className=" w-full flex justify-end items-center text-[2.5rem] text-gray-200">
+               <div className=" w-full flex justify-start items-center text-[2.5rem] text-gray-200">
                   Job Portal
                </div>
                <div className=" flex flex-col items-start justify-start">

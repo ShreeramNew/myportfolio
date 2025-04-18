@@ -89,7 +89,7 @@ export default function Intro() {
             </a>
          </div>
 
-         {/* Github and other links  */}
+         {/* extra inner shadow */}
          <div className=" z-[4] h-[5rem] w-full border- absolute bottom-[0rem] flex justify-start items-center px-[2rem] md:px-[20rem] gap-5 text-gray-300 border-">
             <div className=" w-full h-full absolute inset-0 bg-gradient-to-t from-background to-transparent border-"></div>
          </div>
