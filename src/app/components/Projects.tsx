@@ -18,7 +18,7 @@ export default function Projects() {
             {/* Arrows  */}
             <div className=" flex justify-center items-center gap-3 ">
                <div className=" text-white w-[50px] h-[50px] rounded-full shadow-sm cursor-pointer flex justify-center z-[10] items-center relative">
-                  <div className="w-[50px] h-[50px] rounded-full shadow-sm cursor-pointer shadow-themeOrange absolute inset-0 animate-spin duration-500 z-[11]"></div>
+                  <div className="w-[50px] h-[50px] rounded-full shadow-sm cursor-pointer shadow-themeOrange absolute inset-0 animate-spin duration-500 reverse-spin z-[11]"></div>
                   <FaArrowLeftLong size={25} />
                </div>
                <div className=" text-white w-[50px] h-[50px] rounded-full shadow-sm cursor-pointer flex justify-center z-[10] items-center relative">
@@ -27,28 +27,16 @@ export default function Projects() {
                </div>
             </div>
          </div>
-         <div className=" w-full border- px-[1rem] md:px-0 grid grid-cols-6 border- gap-[2rem]">
-            <div className=" w-full flex flex-col col-span-2 justify-start items-start border-">
-               <div className=" h-[20rem] w-[25rem] border-">
-                  <Image alt="jobNow" src={jobNow} className=" w-full h-full object-contain" />
+         <div className=" w-full border- px-[1rem] md:px-0 grid grid-cols-6 border- gap-[4rem]">
+            <div className=" w-full flex flex-col col-span-2 justify-center items-start border-">
+               <div className=" h-[12rem] w-[25rem] border- rounded-[16px] overflow-hidden">
+                  <Image alt="jobNow" src={jobNow} className=" w-full h-full object-cover" />
                </div>
 
                {/* Project Links  */}
                <div className=" flex justify-center items-center gap-2">
                   <div
-                     className=" w-[10rem] h-[2.6rem] border-2 overflow-hidden border-themeOrange rounded-[6px] flex justify-center items-center text-gray-100 mt-[4rem] text-[1.3rem] cursor-pointer relative"
-                     onMouseOver={() => setShowBg(true)}
-                     onMouseLeave={() => setShowBg(false)}
-                  >
-                     <div className="z-[1]">View Project</div>
-                     <div
-                        className={`w-[11rem] h-full absolute ${
-                           showBg ? "left-0" : "left-[-11rem]"
-                        } transition-all duration-500  rounded-r-[7px] bg-themeOrange z-[0]`}
-                     ></div>
-                  </div>
-                  <div
-                     className=" w-[10rem] h-[2.6rem] border-2 overflow-hidden border-themeOrange rounded-[6px] flex justify-center items-center text-gray-100 mt-[4rem] text-[1.3rem] cursor-pointer relative"
+                     className=" w-[9rem] h-[2.6rem] border-2 overflow-hidden border-themeOrange rounded-[6px] flex justify-center items-center text-gray-100 mt-[4rem] text-[1.1rem] cursor-pointer relative"
                      onMouseOver={() => setShowBg(true)}
                      onMouseLeave={() => setShowBg(false)}
                   >
@@ -56,6 +44,18 @@ export default function Projects() {
                      <div
                         className={`w-[11rem] h-full absolute ${
                            showBg ? "left-[-11rem]" : "left-[0rem]"
+                        } transition-all duration-500  rounded-r-[7px] bg-themeOrange z-[0]`}
+                     ></div>
+                  </div>
+                  <div
+                     className=" w-[9rem] h-[2.6rem] border-2 overflow-hidden border-themeOrange rounded-[6px] flex justify-center items-center text-gray-100 mt-[4rem] text-[1.1rem] cursor-pointer relative"
+                     onMouseOver={() => setShowBg(true)}
+                     onMouseLeave={() => setShowBg(false)}
+                  >
+                     <div className="z-[1]">View Project</div>
+                     <div
+                        className={`w-[11rem] h-full absolute ${
+                           showBg ? "left-0" : "left-[-11rem]"
                         } transition-all duration-500  rounded-r-[7px] bg-themeOrange z-[0]`}
                      ></div>
                   </div>
