@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import jobNow from "../../../assets/images/jobNow.png";
 import batteryStatus from "../../../assets/images/batteryStatus.png";
+import news_app from "../../../assets/images/news_app.png";
 import Image from "next/image";
 import { GoDotFill } from "react-icons/go";
 import { FaArrowRight } from "react-icons/fa";
@@ -90,6 +91,47 @@ export default function Projects() {
          image: batteryStatus,
          sourceCodeLink: "https://github.com/ShreeramNew/Battery-Status",
          viewProjectLink: "https://battery-health.netlify.app/",
+      },
+      {
+         _id: "newsAPP",
+         projectName: "News App",
+         intro: "This is a web application built using React JS that fetches news from all over the world. Users can fetch news according to their country and category choice. It includes major concepts of React like useState, useEffect, Infinite Scroll, Context API, and many more.",
+         subPoints: (
+            <>
+               <CustomPoint>
+                  <div>
+                     Fetched news dynamically based on user's country and category using{" "}
+                     <Highlight text={"News API"} /> integration.
+                  </div>
+               </CustomPoint>
+               <CustomPoint>
+                  <div>
+                     Utilized <Highlight text={"React hooks"} /> like{" "}
+                     <Highlight text={"useState"} /> and <Highlight text={"useEffect"} /> for state
+                     management and lifecycle control.
+                  </div>
+               </CustomPoint>
+               <CustomPoint>
+                  <div>
+                     Implemented <Highlight text={"Infinite Scroll"} /> to enhance user experience
+                     while browsing continuous news content.
+                  </div>
+               </CustomPoint>
+               <CustomPoint>
+                  <div>
+                     Managed global state with <Highlight text={"Context API"} /> to enable country
+                     and category preferences throughout the app.
+                  </div>
+               </CustomPoint>
+               <div className="text-gray-300 font-thin mt-3">
+                  <span className="text-gray-200 text-[1.1rem] font-medium">Tech Stack:</span> React
+                  JS, useState, useEffect, Context API, Infinite Scroll, News API, Tailwind CSS
+               </div>
+            </>
+         ),
+         image: news_app,
+         sourceCodeLink: "https://github.com/ShreeramNew/NewsyWorld",
+         viewProjectLink: "",
       },
    ];
 
@@ -182,19 +224,25 @@ export default function Projects() {
                      </a>
 
                      {/* View project button  */}
-                     <a
-                        href={activeData.viewProjectLink}
-                        className=" w-[9rem] h-[2.6rem] border-2 overflow-hidden border-themeOrange rounded-[6px] flex justify-center items-center text-gray-100 mt-[4rem] text-[1.1rem] cursor-pointer relative"
-                        onMouseOver={() => setShowBg(true)}
-                        onMouseLeave={() => setShowBg(false)}
-                     >
-                        <div className="z-[1]">View Project</div>
-                        <div
-                           className={`w-[11rem] h-full absolute ${
-                              showBg ? "left-0" : "left-[-11rem]"
-                           } transition-all duration-500  rounded-r-[7px] bg-themeOrange z-[0]`}
-                        ></div>
-                     </a>
+                     {activeData.viewProjectLink !== "" ? (
+                        <a
+                           href={activeData.viewProjectLink}
+                           className=" w-[9rem] h-[2.6rem] border-2 overflow-hidden border-themeOrange rounded-[6px] flex justify-center items-center text-gray-100 mt-[4rem] text-[1.1rem] cursor-pointer relative"
+                           onMouseOver={() => setShowBg(true)}
+                           onMouseLeave={() => setShowBg(false)}
+                        >
+                           <div className="z-[1]">View Project</div>
+                           <div
+                              className={`w-[11rem] h-full absolute ${
+                                 showBg ? "left-0" : "left-[-11rem]"
+                              } transition-all duration-500  rounded-r-[7px] bg-themeOrange z-[0]`}
+                           ></div>
+                        </a>
+                     ) : (
+                        <div className=" w-[9rem] h-[2.6rem] border-2 overflow-hidden border-gray-600 rounded-[6px] flex justify-center items-center text-gray-800 mt-[4rem] text-[1.1rem] cursor-not-allowed relative">
+                           <div className="z-[1]">View Project</div>
+                        </div>
+                     )}
                   </div>
                </div>
                <div className=" w-full col-span-4">
