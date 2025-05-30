@@ -165,8 +165,9 @@ export default function Projects() {
    };
 
    return (
-      <div className=" lg:max-w-[78rem] mx-auto w-full min-h-[30rem] py-[10rem] pb-[3rem] border-">
-         <div className=" border- w-full text-center md:text-left lg:w-[90%] flex justify-between items-center ">
+      <div className=" lg:max-w-[78rem] mx-auto w-full min-h-[30rem] md:py-[10rem] pb-[3rem] border-">
+         {/* Section title and Arrows  */}
+         <div className=" border- w-full text-center md:text-left lg:w-[90%] flex-col md:flex-row gap-[1rem] md:gap-[0] flex justify-between items-center ">
             <div>
                <div className=" text-[1.4rem] text-gray-300 font-semibold">PROJECTS</div>
                <div className=" text-[2.3rem] text-themeOrange font-[500]">Built to Learn</div>
@@ -195,10 +196,10 @@ export default function Projects() {
                initial={{ opacity: 0 }}
                animate={{ opacity: 1 }}
                transition={{ duration: 2 }}
-               className=" w-full border- px-[1rem] md:px-0 grid grid-cols-6 border- gap-[4rem]"
+               className=" w-full border- px-[1rem] md:px-0 flex mt-[1rem] md:mt-0 flex-col flex-col-reverse md:grid md:grid-cols-6 border- gap-[4rem]"
             >
-               <div className=" w-full flex flex-col col-span-2 justify-center items-start border-">
-                  <motion.div className=" h-[12rem] w-[25rem] border- rounded-[16px] overflow-hidden">
+               <div className=" w-full flex flex-col  md:col-span-2 justify-center items-start border-">
+                  <motion.div className=" h-[12rem] w-[22rem] md:w-[25rem] border- rounded-[16px] overflow-hidden">
                      <Image
                         alt="jobNow"
                         src={activeData.image}
@@ -207,11 +208,11 @@ export default function Projects() {
                   </motion.div>
 
                   {/* Project Links  */}
-                  <div className=" flex justify-center items-center gap-2">
+                  <div className=" flex justify-center items-center gap-2 w-full md:w-fit mt-[1.3rem] md:mt-0">
                      {/* Source code button  */}
                      <a
                         href={activeData.sourceCodeLink}
-                        className=" w-[9rem] h-[2.6rem] border-2 overflow-hidden border-themeOrange rounded-[6px] flex justify-center items-center text-gray-100 mt-[4rem] text-[1.1rem] cursor-pointer relative"
+                        className=" w-[9rem] h-[2.6rem] border-2 overflow-hidden border-themeOrange rounded-[6px] flex justify-center items-center text-gray-100 md:mt-[4rem] text-[1.1rem] cursor-pointer relative"
                         onMouseOver={() => setShowBg(true)}
                         onMouseLeave={() => setShowBg(false)}
                      >
@@ -227,7 +228,7 @@ export default function Projects() {
                      {activeData.viewProjectLink !== "" ? (
                         <a
                            href={activeData.viewProjectLink}
-                           className=" w-[9rem] h-[2.6rem] border-2 overflow-hidden border-themeOrange rounded-[6px] flex justify-center items-center text-gray-100 mt-[4rem] text-[1.1rem] cursor-pointer relative"
+                           className=" w-[9rem] h-[2.6rem] border-2 overflow-hidden border-themeOrange rounded-[6px] flex justify-center items-center text-gray-100 md:mt-[4rem] text-[1.1rem] cursor-pointer relative"
                            onMouseOver={() => setShowBg(true)}
                            onMouseLeave={() => setShowBg(false)}
                         >
@@ -239,13 +240,13 @@ export default function Projects() {
                            ></div>
                         </a>
                      ) : (
-                        <div className=" w-[9rem] h-[2.6rem] border-2 overflow-hidden border-gray-600 rounded-[6px] flex justify-center items-center text-gray-800 mt-[4rem] text-[1.1rem] cursor-not-allowed relative">
+                        <div className=" w-[9rem] h-[2.6rem] border-2 overflow-hidden border-gray-600 rounded-[6px] flex justify-center items-center text-gray-800 md:mt-[4rem] text-[1.1rem] cursor-not-allowed relative">
                            <div className="z-[1]">View Project</div>
                         </div>
                      )}
                   </div>
                </div>
-               <div className=" w-full col-span-4">
+               <div className=" w-full md:col-span-4">
                   {/* project Title  */}
                   <div className=" w-full flex justify-start items-center text-[2.5rem] text-gray-200">
                      {activeData.projectName}
