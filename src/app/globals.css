@@ -15,3 +15,27 @@ body {
 .reverse-spin {
    animation-direction: reverse;
 }
+
+
+.node__root > circle {
+  fill: red;
+}
+
+.node__branch > circle {
+  fill: yellow;
+}
+
+.node__leaf > circle {
+  fill: green;
+  /* Let's also make the radius of leaf nodes larger */
+  r: 40;
+}
+
+.custom-link{
+   stroke: white !important;
+}
+
+.rd3t-label__title{
+   /* color: white !important; */
+   fill:white !important;
+}

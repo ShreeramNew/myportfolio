@@ -123,7 +123,7 @@ export default function Experience() {
                   },
                }}
             >
-               <Timeline mode="left" items={items} />
+               <Timeline mode="left" items={items} reverse={true} />
             </ConfigProvider>
          </div>
       </div>
