@@ -181,7 +181,7 @@ export default function Projects() {
   };
 
   return (
-    <div className=" md:max-w-[42rem] ipadMini-To-ipadAir:max-w-[60rem] lg:max-w-[78rem] mx-auto w-full min-h-[30rem] md:py-[6rem] lg:py-[10rem] pb-[3rem] border-">
+    <div className=" px-2 md:px-8 afterIpad:max-w-[78rem] mx-auto w-full min-h-[30rem] md:py-[6rem] lg:py-[10rem] pb-[3rem] border-">
       {/* Section title and Arrows  */}
       <div className=" border- w-full text-center md:text-left lg:w-[90%] flex-col md:flex-row gap-[1rem] md:gap-[0] flex justify-between items-center ">
         <div>
@@ -216,11 +216,11 @@ export default function Projects() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 2 }}
-          className=" w-full border- px-[1rem] md:px-0 flex mt-[1rem] md:mt-0 flex-col flex-col-reverse  lg:grid md:grid-cols-6 border- gap-[4rem]"
+          className=" w-full border- px-[1rem] md:px-0 flex mt-[1rem] md:mt-0 flex-col flex-col-reverse  lg:grid md:grid-cols-6 border- gap-[4rem] afterIpad:gap-[11rem]"
         >
           {/* Image and Buttons Sections  */}
           <div className=" w-full flex flex-col  md:col-span-2 justify-center items-center ipadMini-To-ipadAir:items-center lg:items-start border-">
-            <motion.div className=" h-[12rem] w-[22rem] md:w-[25rem] ipadMini-To-ipadAir:w-[20rem] lg:w-[25rem] border- rounded-[16px] overflow-hidden">
+            <motion.div className=" h-[12rem] w-[22rem] md:w-[25rem] ipadMini-To-ipadAir:w-[20rem] ipadMini-To-ipadAir:h-[11rem] lg:h-[12rem] lg:w-[25rem] border- rounded-[16px] overflow-hidden">
               <Image
                 alt="jobNow"
                 src={activeData.image}
@@ -276,7 +276,7 @@ export default function Projects() {
             </div>
             <div className=" flex flex-col items-start justify-start">
               {/* project Intro  */}
-              <div className=" text-gray-200 ipadMini-To-ipadAir:w-full lg:w-[80%] mt-3 mb-2">
+              <div className=" text-gray-200 ipadMini-To-ipadAir:w-full afterIpad:w-[96%] mt-3 mb-2">
                 {activeData.intro}
               </div>
 

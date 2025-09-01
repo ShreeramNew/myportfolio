@@ -15,9 +15,10 @@ const config: Config = {
       screens: {
         ipadMini: { min: "1024px", max: "1180px" },
         "ipadMini-To-ipadAir": { min: "1024px", max: "1365px" },
-        "ipad-air": { min: "1180px", max: "1365px" }, // Custom breakpoint for iPad Air
-        "ipad-pro": { min: "1366px", max: "1400px" }, // Custom breakpoint for iPad Air
-        "ipad-air-portrait": { min: "768px", max: "1020px" }, // Custom breakpoint for iPad Air
+        "ipad-air": { min: "1180px", max: "1365px" },
+        "ipad-pro": { min: "1366px", max: "1400px" },
+        afterIpad: { min: "1400px" },
+        "ipad-air-portrait": { min: "768px", max: "1020px" },
       },
     },
   },
