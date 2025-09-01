@@ -114,8 +114,9 @@ export default function Experience() {
     },
   ];
   return (
-    <div className=" lg:max-w-[78rem] mx-auto w-full min-h-[30rem] py-[10rem] pb-[3rem] border- flex flex-col gap-[3rem] md:gap-0 md:flex-row justify-cente items-centerr md:justify-between md:items-start">
-      <div className=" border- w-full text-center md:text-left lg:w-[90%] ">
+    <div className=" md:max-w-[40rem] ipadMini-To-ipadAir:max-w-[60rem] ipad-air:max-w-[68rem] lg:max-w-[78rem] mx-auto w-full min-h-[30rem] py-[10rem] pb-[3rem] border- flex flex-col lg:flex-row gap-[3rem] md:gap-0 md:justify-between md:items-start">
+      {/* Title  */}
+      <div className=" border- w-full text-center md:text-left ipadMini-To-ipadAir:w-[57%] lg:w-[90%] ">
         <div className=" text-[1.4rem] text-gray-300 font-semibold">
           WORK EXPERIENCE
         </div>
@@ -123,7 +124,9 @@ export default function Experience() {
           The Road So Far
         </div>
       </div>
-      <div className=" w-full border- px-[1rem] md:px-0 ">
+
+      {/* Desicription section  */}
+      <div className=" w-full border- md:mt-[4rem] lg:mt-0 px-[1rem] md:px-0 ">
         <ConfigProvider
           theme={{
             components: {
