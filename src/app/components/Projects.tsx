@@ -181,7 +181,7 @@ export default function Projects() {
   };
 
   return (
-    <div className=" px-2 md:px-8 afterIpad:max-w-[78rem] mx-auto w-full min-h-[30rem] md:py-[6rem] lg:py-[10rem] pb-[3rem] border-">
+    <div className=" px-2 md:px-8 afterIpad:px-0  afterIpad:max-w-[78rem] mx-auto w-full min-h-[30rem] md:py-[6rem] lg:py-[10rem] pb-[3rem] border-">
       {/* Section title and Arrows  */}
       <div className=" border- w-full text-center md:text-left lg:w-[90%] flex-col md:flex-row gap-[1rem] md:gap-[0] flex justify-between items-center ">
         <div>

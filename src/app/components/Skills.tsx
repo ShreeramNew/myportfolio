@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Skills() {
   return (
-    <div className=" w-full min-h-[10rem] border- md:max-w-[40rem] ipadMini-To-ipadAir:max-w-[60rem] lg:max-w-[78rem] mx-auto mb-[16rem] flex flex-col justify-center items-center">
+    <div className=" w-full min-h-[10rem] border- px-2 md:px-8 afterIpad:px-0 afterIpad:max-w-[78rem] mx-auto mb-[16rem] flex flex-col justify-center items-center">
       <div className=" border- w-full text-center md:text-left mt-16 md:mt-0  ">
         <div className=" text-[1.4rem] text-gray-300 font-semibold uppercase">
           Skills
