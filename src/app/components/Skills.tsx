@@ -23,7 +23,7 @@ import {
 
 export default function Skills() {
   return (
-    <div className=" w-full h-fit relative overflow-hidden py-[6rem]">
+    <div className=" w-full h-fit relative overflow-hidden py-[6rem] skills-container">
       <div className=" w-full min-h-[10rem] border- px-2 md:px-8 afterIpad:px-0 afterIpad:max-w-[78rem] mx-auto flex flex-col justify-center items-center relative z-[10]">
         <div className=" border- w-full text-center md:text-left mt-16 md:mt-0  ">
           <div className=" text-[1.4rem] text-gray-300 font-semibold uppercase">
@@ -107,46 +107,46 @@ export default function Skills() {
       </div>
 
       {/* Black overlay  */}
-      <div className=" w-full h-full absolute inset-0 bg-black opacity-[0.6] z-[1]"></div>
+      <div className=" w-full h-full absolute inset-0 bg-black opacity-[0.6] z-[1] backdrop-blur-sm"></div>
 
       {/* Skills Banner  */}
-      <div className=" w-full h-max absolute inset-0   border flex flex-wrap gap-20 justify-center p-3 text-themeOrange z-0 blur-sm">
-        <RiNextjsFill size={150} />
-        <FaReact size={150} />
-        <SiRedux size={150} />
-        <SiTypescript size={150} />
-        <RiTailwindCssFill size={150} />
-        <FiFramer size={150} />
-        <FaHtml5 size={150} />
-        <FaCss3 size={150} />
-        <FaJs size={150} />
-        <FaNodeJs size={150} />
-        <SiExpress size={150} />
-        <SiMongodb size={150} />
-        <FaGitAlt size={150} />
-        <FaGithub size={150} />
-        <RiVercelFill size={150} />
-        <SiNetlify size={150} />
-        <SiRender size={150} />
-        <SiPostman size={150} />
-        <RiNextjsFill size={150} />
-        <FaReact size={150} />
-        <SiRedux size={150} />
-        <SiTypescript size={150} />
-        <RiTailwindCssFill size={150} />
-        <FiFramer size={150} />
-        <FaHtml5 size={150} />
-        <FaCss3 size={150} />
-        <FaJs size={150} />
-        <FaNodeJs size={150} />
-        <SiExpress size={150} />
-        <SiMongodb size={150} />
-        <FaGitAlt size={150} />
-        <FaGithub size={150} />
-        <RiVercelFill size={150} />
-        <SiNetlify size={150} />
-        <SiRender size={150} />
-        <SiPostman size={150} />
+      <div className=" w-full h-max absolute inset-0 blur-sm flex flex-wrap gap-4 gap-y-10 md:gap-y-20 md:gap-20 justify-center p-3 text-themeOrange z-0 blur-ssm skills-banner">
+        <RiNextjsFill size={150}/>
+        <FaReact size={150}/>
+        <SiRedux size={150}/>
+        <SiTypescript size={150}/>
+        <RiTailwindCssFill size={150}/>
+        <FiFramer size={150}/>
+        <FaHtml5 size={150}/>
+        <FaCss3 size={150}/>
+        <FaJs size={150}/>
+        <FaNodeJs size={150}/>
+        <SiExpress size={150}/>
+        <SiMongodb size={150}/>
+        <FaGitAlt size={150}/>
+        <FaGithub size={150}/>
+        <RiVercelFill size={150}/>
+        <SiNetlify size={150}/>
+        <SiRender size={150}/>
+        <SiPostman size={150}/>
+        <RiNextjsFill size={150}/>
+        <FaReact size={150}/>
+        <SiRedux size={150}/>
+        <SiTypescript size={150}/>
+        <RiTailwindCssFill size={150}/>
+        <FiFramer size={150}/>
+        <FaHtml5 size={150}/>
+        <FaCss3 size={150}/>
+        <FaJs size={150}/>
+        <FaNodeJs size={150}/>
+        <SiExpress size={150}/>
+        <SiMongodb size={150}/>
+        <FaGitAlt size={150}/>
+        <FaGithub size={150}/>
+        <RiVercelFill size={150}/>
+        <SiNetlify size={150}/>
+        <SiRender size={150}/>
+        <SiPostman size={150}/>
       </div>
 
       {/* Fader for top*/}

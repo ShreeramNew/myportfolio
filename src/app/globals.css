@@ -3,19 +3,18 @@
 @tailwind utilities;
 
 @layer utilities {
-   .text-balance {
-      text-wrap: balance;
-   }
+  .text-balance {
+    text-wrap: balance;
+  }
 }
 
 body {
-   background-color: #0a0909;
+  background-color: #0a0909;
 }
 
 .reverse-spin {
-   animation-direction: reverse;
+  animation-direction: reverse;
 }
-
 
 .node__root > circle {
   fill: red;
@@ -31,11 +30,35 @@ body {
   r: 40;
 }
 
-.custom-link{
-   stroke: white !important;
+.custom-link {
+  stroke: white !important;
 }
 
-.rd3t-label__title{
-   /* color: white !important; */
-   fill:white !important;
+.rd3t-label__title {
+  /* color: white !important; */
+  fill: white !important;
 }
+
+.skills-container {
+  perspective: 1000px;
+}
+
+.skills-banner {
+  transform: rotateX(15deg) translateZ(200px);
+  transform-style: preserve-3d;
+  animation: moveUp 30s infinite linear alternate-reverse;
+}
+
+@keyframes moveUp {
+  0% {
+    top: 0%;
+  }
+  100% {
+    top:-70%
+  }
+}
+
+/* .skill-icons{
+   width: 40px !important;
+   height: 40px !important;
+} */
