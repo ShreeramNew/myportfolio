@@ -83,13 +83,13 @@ export default function Intro() {
 
          {/* Github and other links  */}
          <div className=" z-[4] h-fit w-full border- absolute bottom-[5rem] flex justify-start items-center px-[2rem] md:px-[20rem] gap-5 text-gray-300">
-            <a href="https://github.com/ShreeramNew">
+            <a target="_blank" href="https://github.com/ShreeramNew">
                <FaGithub size={30} />
             </a>
-            <a href="https://www.linkedin.com/in/shreeram-630102262/">
+            <a target="_blank" href="https://www.linkedin.com/in/shreeram-630102262/">
                <FaLinkedin size={30} />
             </a>
-            <a href="mailto:shreerambca1@gmail.com">
+            <a target="_blank" href="mailto:shreerambca1@gmail.com">
                <MdOutlineEmail size={35} />
             </a>
          </div>
