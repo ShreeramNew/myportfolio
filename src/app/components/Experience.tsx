@@ -25,18 +25,10 @@ export default function Experience() {
           <div className=" flex flex-col gap-[10px] mt-3">
             <CustomPoint>
               <div>
-                Developed multiple web applications using{" "}
-                <Highlight text={"Next.js, TypeScript, React.js"} /> and{" "}
-                <Highlight text={"Ant Design"} />
-              </div>
-            </CustomPoint>
-            <CustomPoint>
-              <div>
                 Worked on a payment-related web application with 2000+ users,
                 integrating APIs, optimizing performance, and improving overall
                 website efficiency by ~20% using{" "}
-                <Highlight text={"debouncing"} /> (reducing redundant API calls
-                by grouping user input requests into 500ms intervals).
+                <Highlight text={"debouncing"} />.
               </div>
             </CustomPoint>
             <CustomPoint>
@@ -86,8 +78,28 @@ export default function Experience() {
           <div className=" flex flex-col gap-[10px] mt-3">
             <CustomPoint>
               <div>
-                Directly collaborated with clients to understand project
-                requirements and deliver optimized solutions.
+                Contributed to the development of a{" "}
+                <Highlight text={"large-scale Power Supply CMS"} />, managing
+                hierarchical role structures and high-volume data visualization.
+                Implemented interactive charts and graphs, along with robust
+                bulk data management features to enhance usability and
+                operational efficiency.
+              </div>
+            </CustomPoint>
+            <CustomPoint>
+              <div>
+                Optimized tree-view search performance by approximately{" "}
+                <Highlight text={"70%"} /> through effective component
+                isolation, strategic use of useMemo, and debounced search logic
+                using Lodash, significantly reducing unnecessary re-renders and
+                delivering a smooth, responsive user experience.
+              </div>
+            </CustomPoint>
+
+            <CustomPoint>
+              <div>
+                Developed a restaurant QR-offer platform (User & Admin modules)
+                enabling location-based deals and real-time bill discounts.
               </div>
             </CustomPoint>
             <CustomPoint>
@@ -100,12 +112,6 @@ export default function Experience() {
               <div>
                 Used Next.js, Tailwind CSS, and Ant Design to implement a fully
                 responsive and scalable UI.
-              </div>
-            </CustomPoint>
-            <CustomPoint>
-              <div>
-                Developed a seamless and efficient frontend experience, ensuring
-                high performance and user satisfaction
               </div>
             </CustomPoint>
           </div>

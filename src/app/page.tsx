@@ -1,5 +1,5 @@
 import Image from "next/image";
-import pic from "../../assets/images/pic.jpg";
+import pic from "../../assets/images/profile.png";
 import Intro from "./components/Intro";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";

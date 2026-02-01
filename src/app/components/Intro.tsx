@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import pic from "../../../assets/images/pic.jpg";
+import pic from "../../../assets/images/profile.png";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
@@ -48,16 +48,16 @@ export default function Intro() {
 
             {/*Profile Image  */}
             <div className=" h-full w-fit border- flex justify-center items-start scale-[0.8] md:scale-[1] md:items-center absolute right-5 top-2 md:relative z-[5]">
-               <div className=" w-[210px] h-[210px] rounded-full flex justify-center items-center">
-                  <div className="w-[160px] h-[160px] overflow-hidden rounded-full border-">
+               <div className=" w-[240px] h-[240px] rounded-full flex justify-center items-center">
+                  <div className="w-[200px] h-[200px] overflow-hidden rounded-full border-">
                      <Image
                         src={pic}
                         alt="my Picture"
-                        className=" w-[180px] h-[200px] object-cover scale-[1.3] relative top-[1rem]"
+                        className=" w-[200px] h-[200px] object-cover scale-[1.4] relative left-[-1rem] top-[18px]"
                      />
                   </div>
-                  <div className=" w-[210px] h-[210px] border-b-2 border-t-2 animate-[spin_2s_linear_infinite]  rounded-full flex justify-center items-center absolute ">
-                     <div className=" w-[180px] h-[180px] border-b-2 border-t-2 animate-[spin_1.4s_linear_infinite] rounded-full flex justify-center items-center"></div>
+                  <div className=" w-[240px] h-[240px] border-b-2 border-t-2 animate-[spin_2s_linear_infinite]  rounded-full flex justify-center items-center absolute ">
+                     {/* <div className=" w-[230px] h-[230px] border-b-2 border-t-2 animate-[spin_1.4s_linear_infinite] rounded-full flex justify-center items-center"></div> */}
                   </div>
                </div>
             </div>
