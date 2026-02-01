@@ -27,8 +27,8 @@ export default function Intro() {
                   <div className=" text-[2.1rem] text-gray-200">
                      I' AM <span className=" text-[3.2rem] text-themeOrange">SHREERAM</span>
                   </div>
-                  <div className="text-[2.3rem] text-gray-300">
-                     A creator of <span className="text-gray-100">Digital magic!</span>{" "}
+                  <div className="text-[2.3rem] text-gray-400">
+                     A creator of <span className="text-gray-100">Digital Magic!</span>{" "}
                   </div>
                </div>
                <div
