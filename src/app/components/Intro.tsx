@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import pic from "../../../assets/images/profile.png";
+import pic from "../../../assets/images/profile.jpg";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
@@ -27,7 +27,7 @@ export default function Intro() {
                   <div className=" text-[2.1rem] text-gray-200">
                      I' AM <span className=" text-[3.2rem] text-themeOrange">SHREERAM</span>
                   </div>
-                  <div className="text-[2.3rem] text-gray-400">
+                  <div className="text-[2.3rem] text-gray-300  max-md:text-gray-100">
                      A creator of <span className="text-gray-100">Digital Magic!</span>{" "}
                   </div>
                </div>
@@ -53,7 +53,7 @@ export default function Intro() {
                      <Image
                         src={pic}
                         alt="my Picture"
-                        className=" w-[200px] h-[200px] object-cover scale-[1.4] relative left-[-1rem] top-[18px]"
+                        className=" w-[200px] h-[200px] object-cover scale-[1.4] relative left-[0rem] top-[24px]"
                      />
                   </div>
                   <div className=" w-[240px] h-[240px] border-b-2 border-t-2 animate-[spin_2s_linear_infinite]  rounded-full flex justify-center items-center absolute ">

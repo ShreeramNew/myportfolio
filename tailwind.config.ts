@@ -14,6 +14,7 @@ const config: Config = {
       },
       screens: {
         ipadMini: { min: "1024px", max: "1180px" },
+        "max-md": { min: "100px", max: "1024px" },
         "ipadMini-To-ipadAir": { min: "1024px", max: "1365px" },
         "ipad-air": { min: "1180px", max: "1365px" },
         "ipad-pro": { min: "1366px", max: "1400px" },
