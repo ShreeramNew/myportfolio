@@ -1,9 +1,10 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import { ConfigProvider, Steps, Timeline } from "antd";
 import { CiClock1 } from "react-icons/ci";
 import img1 from "../../../assets/images/rank9.jpeg";
 import img2 from "../../../assets/images/webFirst.jpeg";
-import { StaticImageData } from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 type AchievementsType = {
   title: string;
@@ -21,7 +22,7 @@ export default function Achievements() {
     {
       title: "1st Place – Web Designing",
       subtitle: "State-Level IT Fest 2023 | St. Philomena College, Puttur",
-      imageURL: img1,
+      imageURL: img2,
     },
   ];
 
@@ -38,7 +39,7 @@ export default function Achievements() {
       </div>
 
       {/* Cards  */}
-      <div className=" flex justify-evenly items-center">
+      <div className=" flex max-md:flex-col justify-center gap-10 mt-10 items-center">
         {AchievementsData.map(({ title, imageURL, subtitle }) => (
           <AchieveCard
             key={title}
@@ -53,5 +54,32 @@ export default function Achievements() {
 }
 
 const AchieveCard = ({ title, imageURL, subtitle }: AchievementsType) => {
-  return <div className=" w-[10rem] h-[10rem] bg-white rounded-lg"></div>;
+  const [isHover, setIsHover] = useState(false);
+  return (
+    <div
+      onMouseOver={() => setIsHover(true)}
+      onMouseLeave={() => setIsHover(false)}
+      className=" w-[21rem] md:w-[30rem] h-[15rem] bg-white/10 rounded-lg relative overflow-hidden"
+    >
+      <div className=" absolute left-0 z-[5] bg-gradient-to-t w-full h-full from-gray-900  border-   "></div>
+      <div className=" w-full h-full z-2 relative">
+        <Image
+          src={imageURL}
+          alt={title}
+          className={` ${isHover ? " scale-[1.1] " : " scale-[1] "} transition-all duration-500 w-full h-full object-cover`}
+          fill
+        />
+      </div>
+      {/* Title and Subtitle  */}
+      <div className=" absolute z-[6] w-full bottom-0 left-0 text-center p-3 z-3">
+        {/* Title  */}
+        <div className=" relative z-1">
+          <div className=" text-themeOrange text-xl font-semibold ">
+            {title}
+          </div>
+          <div className=" text-gray-200"> {subtitle}</div>
+        </div>
+      </div>
+    </div>
+  );
 };

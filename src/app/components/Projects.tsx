@@ -188,7 +188,7 @@ export default function Projects() {
           <div className=" text-[1.4rem] text-gray-300 font-semibold">
             PROJECTS
           </div>
-          <div className=" text-[2.3rem] text-themeOrange font-[500]">
+          <div className=" text-[2.3rem] text-themeOrange  font-[500]">
             Built to Learn
           </div>
         </div>
