@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import jobNow from "../../../assets/images/jobNow.png";
 import batteryStatus from "../../../assets/images/batteryStatus.png";
 import news_app from "../../../assets/images/news_app.png";
@@ -8,6 +8,8 @@ import { GoDotFill } from "react-icons/go";
 import { FaArrowRight } from "react-icons/fa";
 import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 import { AnimatePresence, motion } from "framer-motion";
+import useGeneralContext from "../hooks/UseGeneralContext";
+
 
 export default function Projects() {
   const [showBg, setShowBg] = useState<boolean>(false);
@@ -180,8 +182,20 @@ export default function Projects() {
     });
   };
 
+  //-------Related to observer------------
+  const ref = useRef<HTMLDivElement | null>(null);
+  const { ObserveElement } = useGeneralContext();
+  useEffect(() => {
+    if (!ref.current) return;
+    ObserveElement(ref.current);
+  }, []);
+
   return (
-    <div className=" px-2 md:px-8 afterIpad:px-0  afterIpad:max-w-[78rem] mx-auto w-full min-h-[30rem] md:py-[6rem] lg:py-[10rem] pb-[3rem] border-">
+    <div
+      ref={ref}
+      id="projects"
+      className=" px-2 md:px-8 afterIpad:px-0  afterIpad:max-w-[78rem] mx-auto w-full min-h-[30rem] md:py-[6rem] lg:py-[10rem] pb-[3rem] border-"
+    >
       {/* Section title and Arrows  */}
       <div className=" border- w-full text-center md:text-left lg:w-[90%] flex-col md:flex-row gap-[1rem] md:gap-[0] flex justify-between items-center ">
         <div>
@@ -269,7 +283,7 @@ export default function Projects() {
           </div>
 
           {/* Project Title and Description Section  */}
-          <div className=" w-full mt-[4rem] lg:mt-0 md:col-span-4">
+          <div className=" w-full mt-[1rem] lg:mt-0 md:col-span-4">
             {/* project Title  */}
             <div className=" w-full flex justify-start items-center text-[2.5rem] text-gray-200">
               {activeData.projectName}

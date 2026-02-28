@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { Lora } from "next/font/google";
+import ContextProvider from "./context/ContextProvider";
 
 const lora = Lora({ subsets: ["latin"] });
 
@@ -29,9 +30,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className=" scroll-smooth">
       <body className={`${lora.className} ${geistMono.variable} antialiased`}>
-        {children}
+        <ContextProvider>{children}</ContextProvider>
       </body>
     </html>
   );

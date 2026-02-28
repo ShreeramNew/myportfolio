@@ -8,10 +8,12 @@ import Education from "./components/Education";
 import Achievements from "./components/Achivements";
 import Footer from "./components/Footer";
 import FAQ from "./components/FAQ";
+import Navbar from "./components/Navbar";
 
 export default function Home() {
   return (
     <div>
+      <Navbar />
       <Intro />
       <Experience />
       <Projects />

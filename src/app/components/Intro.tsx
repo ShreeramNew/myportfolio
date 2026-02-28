@@ -1,11 +1,12 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import pic from "../../../assets/images/profile.jpg";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 import { IoMenu } from "react-icons/io5";
+import useGeneralContext from "../hooks/UseGeneralContext";
 
 export default function Intro() {
   const [showBg, setShowBg] = useState<boolean>(false);
@@ -18,10 +19,23 @@ export default function Intro() {
     a.target = "_blank";
     a.click();
   };
+
+  //-------Related to observer------------
+  const ref = useRef<HTMLDivElement | null>(null);
+  const { ObserveElement } = useGeneralContext();
+  useEffect(() => {
+    if (!ref.current) return;
+    ObserveElement(ref.current);
+  }, []);
+
   return (
-    <div className=" h-[100vh] w-full bg-background overflow-hidden relative backdrop-blur-sm">
+    <div
+      ref={ref}
+      id="home"
+      className=" h-[100vh] w-full bg-background overflow-hidden relative backdrop-blur-sm"
+    >
       {/* Content that has max-width  */}
-      <div className=" border- w-full relative mx-auto flex justify-between items-center h-full max-w-[23rem] ipad-air-portrait:max-w-[42rem] lg:max-w-[78rem]">
+      <div className=" max-md:pt-20 border- w-full relative mx-auto flex justify-between items-center h-full max-w-[23rem] ipad-air-portrait:max-w-[42rem] lg:max-w-[78rem]">
         {/* Left side intro lines  */}
         <div className=" h-full w-fit px-[1rem] ipad-air-portrait:max-w-[57%] lg:px-[5rem] flex flex-col justify-center items-start z-[4] relative lg:backdrop-blur-0 border-">
           <div className=" border-">
@@ -81,9 +95,6 @@ export default function Intro() {
       <div className=" w-full h-full absolute inset-0 z-[3] bg-black/20 lg:opacity-[0.3] bg-black backdrop-blur-sm"></div>
 
       {/* Menu Icon  */}
-      <div className="w-full h-fit absolute top-[1rem] md:top-[3rem] px-[1rem] md:px-[3rem] text-gray-200 z-[15]">
-        <IoMenu size={35} className=" cursor-pointer" />
-      </div>
 
       {/* Github and other links  */}
       <div className=" z-[4] h-fit w-full border- absolute bottom-[5rem] flex justify-start items-center px-[2rem] md:px-[20rem] gap-5 text-gray-300">

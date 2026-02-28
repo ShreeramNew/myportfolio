@@ -1,10 +1,11 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { ConfigProvider, Steps, Timeline } from "antd";
 import { CiClock1 } from "react-icons/ci";
 import img1 from "../../../assets/images/rank9.jpeg";
 import img2 from "../../../assets/images/webFirst.jpeg";
 import Image, { StaticImageData } from "next/image";
+import useGeneralContext from "../hooks/UseGeneralContext";
 
 type AchievementsType = {
   title: string;
@@ -26,8 +27,20 @@ export default function Achievements() {
     },
   ];
 
+  //-------Related to observer------------
+  const ref = useRef<HTMLDivElement | null>(null);
+  const { ObserveElement } = useGeneralContext();
+  useEffect(() => {
+    if (!ref.current) return;
+    ObserveElement(ref.current);
+  }, []);
+
   return (
-    <div className=" px-4 md:px-8 afterIpad:max-w-[78rem] mx-auto afterIpad:px-0 lg:py-16">
+    <div
+      id="achievements"
+      ref={ref}
+      className=" px-4 md:px-8 afterIpad:max-w-[78rem] mx-auto afterIpad:px-0 lg:py-16"
+    >
       {/* Title  */}
       <div className=" border- w-full text-center md:text-left ipadMini-To-ipadAir:w-[57%] lg:w-[90%] ">
         <div className=" text-[1.4rem] text-gray-300 font-semibold uppercase">

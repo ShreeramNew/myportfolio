@@ -1,9 +1,11 @@
 "use client";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Timeline, ConfigProvider } from "antd";
 import { GoDotFill } from "react-icons/go";
+import useGeneralContext from "../hooks/UseGeneralContext";
 
 export default function Experience() {
+  const ref = useRef<HTMLDivElement | null>(null);
   const items = [
     {
       dot: (
@@ -119,8 +121,19 @@ export default function Experience() {
       ),
     },
   ];
+
+  const { ObserveElement } = useGeneralContext();
+  useEffect(() => {
+    if (!ref.current) return;
+    ObserveElement(ref.current);
+  }, []);
+
   return (
-    <div className=" px-2 md:px-8 afterIpad:px-0  afterIpad:max-w-[78rem] mx-auto w-full min-h-[30rem] py-[10rem] pb-[3rem] border- flex flex-col lg:flex-row gap-[3rem] md:gap-0 md:justify-between md:items-start">
+    <div
+      ref={ref}
+      id="experience"
+      className=" px-2 md:px-8 afterIpad:px-0  afterIpad:max-w-[78rem] mx-auto w-full min-h-[30rem] py-[10rem] pb-[3rem] border- flex flex-col lg:flex-row gap-[3rem] md:gap-0 md:justify-between md:items-start"
+    >
       {/* Title  */}
       <div className=" border- w-full text-center md:text-left ipadMini-To-ipadAir:w-[57%] lg:w-[90%] ">
         <div className=" text-[1.4rem] text-gray-300 font-semibold">
