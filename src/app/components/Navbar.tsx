@@ -1,10 +1,15 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react"; // Install lucide-react or use your own icons
 import useGeneralContext from "../hooks/UseGeneralContext";
 
 export default function Navbar() {
   const { activeTab } = useGeneralContext();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
@@ -22,7 +27,7 @@ export default function Navbar() {
       {/* Desktop Design */}
       <div className="hidden lg:flex items-center gap-2 px-6 py-3 bg-gray-900/60 backdrop-blur-md border border-white/10 rounded-full shadow-2xl">
         {navLinks.map((link) => {
-          const isActive = activeTab === link.id;
+          const isActive = mounted && activeTab === link.id;
           return (
             <a
               key={link.id}
@@ -79,10 +84,10 @@ export default function Navbar() {
                   key={link.id}
                   href={`#${link.id}`}
                   onClick={() => setIsOpen(false)}
-                  className={`text-xl  uppercase tracking-tighter transition-colors ${
+                  className={`px-4 py-2 text-sm font-medium uppercase tracking-wider transition-all duration-300 rounded-full ${
                     isActive
-                      ? "text-themeOrange font-semibold"
-                      : "text-gray-500 font-medium"
+                      ? "bg-[#ff5400] text-white"
+                      : "text-gray-300 hover:text-[#ff5400]"
                   }`}
                 >
                   {link.name}
