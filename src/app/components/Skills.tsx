@@ -95,9 +95,11 @@ export default function Skills() {
                 <li>Node JS</li>
                 <li>Express JS</li>
                 <li>MongoDB</li>
+                <li>WebSocket</li>
+                <li>Redis</li>
                 <li>JWT Authentication</li>
                 <li>Middlewares</li>
-                <li>Bycrypt</li>
+                <li>Bcrypt</li>
               </ul>
             </div>
 
@@ -109,6 +111,8 @@ export default function Skills() {
               <ul className=" text-white list-disc mt-3 ml-5 ">
                 <li>Git</li>
                 <li>GitHub</li>
+                <li>AWS EC2</li>
+                <li>PM2</li>
                 <li>Vercel</li>
                 <li>Netlify</li>
                 <li>Render</li>

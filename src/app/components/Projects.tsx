@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 import jobNow from "../../../assets/images/jobNow.png";
+import pulseOps from "../../../assets/images/pulseOps.png";
 import batteryStatus from "../../../assets/images/batteryStatus.png";
 import news_app from "../../../assets/images/news_app.png";
 import Image from "next/image";
@@ -10,10 +11,55 @@ import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 import { AnimatePresence, motion } from "framer-motion";
 import useGeneralContext from "../hooks/UseGeneralContext";
 
-
 export default function Projects() {
   const [showBg, setShowBg] = useState<boolean>(false);
   const ProjectData = [
+    {
+      _id: "pulseOps",
+      projectName: "PulseOps Core",
+      intro:
+        "A real-time server monitoring dashboard that tracks live cluster metrics and utilizes Gemini AI to generate log diagnostics and alert developers via automated emails.",
+      subPoints: (
+        <>
+          <CustomPoint>
+            <div>
+              Architected a live streaming pipeline on AWS EC2 using{" "}
+              <Highlight text={"WebSockets"} /> to cut network latency by{" "}
+              <Highlight text={"85%"} />.
+            </div>
+          </CustomPoint>
+          <CustomPoint>
+            <div>
+              Integrated <Highlight text={"Redis"} /> to cache route metrics,
+              keeping data lookups under <Highlight text={"1 ms"} /> during peak
+              traffic.
+            </div>
+          </CustomPoint>
+          <CustomPoint>
+            <div>
+              Used native Linux kernel commands (<Highlight text={"tail"} />) to
+              stream logs, saving <Highlight text={"40%"} /> of server memory
+              usage.
+            </div>
+          </CustomPoint>
+          <CustomPoint>
+            <div>
+              Protected <Highlight text={"Redux state"} /> with a strict
+              data-buffer limit to completely halt browser memory leaks.
+            </div>
+          </CustomPoint>
+          <div className="text-gray-100 mt-3">
+            <span className="text-gray-200 text-[1.1rem]">Tech Stack:</span>{" "}
+            Next.js, <Highlight text={"Redux Toolkit"} />, Node.js, Express.js,{" "}
+            <Highlight text={"Redis"} />, WebSockets,{" "}
+            <Highlight text={"MongoDB"} />, Gemini AI, AWS EC2, PM2.
+          </div>
+        </>
+      ),
+      image: pulseOps,
+      sourceCodeLink: "https://github.com/ShreeramNew/pulseops-backend", // Adjust if your repo name is different
+      viewProjectLink: "https://pulseops-system.vercel.app/",
+    },
     {
       _id: "jobPortal",
       projectName: "Job Portal",
@@ -247,6 +293,7 @@ export default function Projects() {
               {/* Source code button  */}
               <a
                 href={activeData.sourceCodeLink}
+                target="_blank"
                 className=" w-[9rem] h-[2.6rem] border-2 overflow-hidden border-themeOrange rounded-[6px] flex justify-center items-center text-gray-100 md:mt-[4rem] text-[1.1rem] cursor-pointer relative"
                 onMouseOver={() => setShowBg(true)}
                 onMouseLeave={() => setShowBg(false)}
@@ -263,6 +310,7 @@ export default function Projects() {
               {activeData.viewProjectLink !== "" ? (
                 <a
                   href={activeData.viewProjectLink}
+                  target="_blank"
                   className=" w-[9rem] h-[2.6rem] border-2 overflow-hidden border-themeOrange rounded-[6px] flex justify-center items-center text-gray-100 md:mt-[4rem] text-[1.1rem] cursor-pointer relative"
                   onMouseOver={() => setShowBg(true)}
                   onMouseLeave={() => setShowBg(false)}

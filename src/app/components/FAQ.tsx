@@ -26,17 +26,17 @@ const faqData = [
     answer:
       "Yes, I am currently working as a Software Development Engineer (Frontend) but am always open to discussing impactful full-time roles or innovative projects.",
   },
-  {
+ {
     key: "4",
     question: "Do you have experience with performance optimization?",
     answer:
-      "Absolutely. In my recent role at Tikanga, I improved tree-view search performance by ~70% using component isolation, useMemo, and lodash debounce.",
+      "Absolutely. In my recent real-time APM project, I optimized backend latency by 85% by swapping standard HTTP polling for WebSockets and caching route metrics with Redis to keep database lookups under 1 ms. On the frontend, I protected system stability under heavy streaming loads by implementing strict data-buffer limits in Redux to eliminate browser memory leaks.",
   },
   {
     key: "5",
     question: "Can you handle both UI design and Backend integration?",
     answer:
-      "While my focus is Frontend, I have a strong grasp of the MERN stack. I've integrated Razorpay gateways, Firebase storage, and JWT-based authentication in several projects.",
+      "Yes, I specialize in end-to-end full-stack architectures. I design highly responsive UIs using Next.js, Tailwind CSS, and Framer Motion, and back them up with robust Node/Express clusters. I have extensive experience integrating WebSockets for real-time streaming, Redis for caching, MongoDB with .lean() optimization, and external APIs—including native Gemini AI models for automated error diagnostics.",
   },
 ];
 
