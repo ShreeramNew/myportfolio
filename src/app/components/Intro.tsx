@@ -11,7 +11,7 @@ export default function Intro() {
 
   const handleResume = () => {
     const a = document.createElement("a");
-    a.href = "https://drive.google.com/file/d/1g-JYoNddiygLiNoODIoz2NtLaTPgMKTJ/view?usp=sharing";
+    a.href = "https://drive.google.com/file/d/1MY3QXdc8wpC_2YOTZ7pCagRliIQsJT1L/view?usp=sharing";
     a.download = "Resume.pdf";
     a.target = "_blank";
     a.click();
